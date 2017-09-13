@@ -2,11 +2,14 @@ f = open("data.txt", "r")
 r = f.read()
 words = r.split()
 
-d ={}
-for k in words:
-    if k in d.keys(): d[k] += 1
-    else: d[k] = 1
+analyze = {}
+for word in words:
+    analyze[word] = analyze.get(word, 0) + 1   
 
-#print(d)
-d = sorted(d)
-print(d)
+flist = sorted(analyze.items(), key=lambda kv: kv[1], reverse=True)
+print("number of words is ", len(flist))
+cnt = 0
+for k, v in flist:
+    print(k, v)
+    if cnt > 100: break
+    cnt += 1
