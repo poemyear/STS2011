@@ -23,12 +23,9 @@
 	
 # Program Flow:
 	1) 검색어 input
-		(i.e.) text: array and arraylist performance
 	2) 검색결과 크롤링
 	3) 크롤링 페이지 내 domain link 분류
-		(i.e.) stackoverflow.com (3) | blogspot.com (1) | codeproject.com (1) | wordpress.com (1) | coderanch.com (1) | wikidot.com (1) | java67.com (1) | dzone.com (1) 
 	4) 사용자로부터 domain 선택 (-site: or +site)
-		(i.e.) -site:stackoverflow.com
 	5) 구글 search url link 생성
 	6) redirect to link or return url(or copy)
 
