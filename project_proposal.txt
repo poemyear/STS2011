@@ -1,1 +1,34 @@
 # This is my project proposal for course [STS2011]
+
+# Title:
+	구글링 헬퍼 by hyeonsoo shin
+ 
+# Summary:
+	제공된 검색어를 기준으로 특정 검색옵션을 적용한 검색결과 페이지를 제공한다
+
+# Specific Aims:
+	"array and arraylist performance" 를 구글링 하였을 때 상단에 다수의 stackoverflow.com 결과들을 확인할 수 있다. 간단한 질답 게시글이 아닌, 자료를 가진 분석결과를 확인하고 싶을 경우엔 stackoverflow의 내용은 도움이 안 되는 경우가 많다.
+	이럴 때엔 해당 도메인 (stackoverflow.com) 링크를 피해 다른 링크들을 클릭하여 확인한다.
+	
+	하지만 이런 경우를 위해 구글에서는 검색어 옵션으로 "site:" 옵션을 제공하고, 이를 이용하여 본 검색어에 옵션을 추가하여 "-site:stackoverflow.com array and arraylist performance" 으로 검색 시, stackoverflow.com 의 게시글들은 모두 제외한 채로 검색결과를 얻을 수 있다.
+	
+	문제는 다수의 사용자들이 이 옵션의 유무를 모른다는 점, 혹은 쉽게 사용법을 까먹는다는 점, 재 타이핑하기에 귀찮다는 점이다.
+	
+	이를 해결하기 위하여 목적에 따라 검색어 옵션들을 조합해주는 구글링 헬퍼 프로그램을 제작한다.
+	
+# Expecting features by version:
+	site: 옵션을 이용한 결과 내 domain 필터적용 결과 제공 program 제작
+	chrome extension porting
+	file:, allintitle 등 옵션기능 추가
+	
+# Program Flow:
+	검색어 input
+	검색결과 크롤링
+	크롤링 페이지 내 domain link 분류
+	사용자로부터 domain 선택 (-site: or +site)
+	구글 search url link 생성
+	redirect to link or return url(or copy)
+ 
+# References:
+	python을 이용한 google chrome extension 제작
+	https://pythonspot.com/en/create-a-chrome-plugin-with-python/
