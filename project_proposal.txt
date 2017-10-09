@@ -89,6 +89,21 @@
 			What is the difference between Array and ArrayList in Java? - Quora
 				https://www.quora.com/What-is-the-difference-between-Array-an... 
 	
+# Building Blocks
+	def getInputSearchText():
+        def doCrawlingByText(searchText):
+        def classifySearchResult(searchResult):
+        def generateFilters():
+        def generateNewSearchLink(searchFilter):
+	def redirectToPage(urlLink):
+	def main():
+		searchText = getInputSearchText()
+		searchResult =  doCrawlingByText(searchText)
+		searchList = classifySearchResult(searchResult)
+		searchFilter = generateFilters()
+		urlLink = generateNewSearchLink(searchFilter)
+		redirectToPage(urlLink)
+
 # References:
 	구글링 옵션 설명
 	http://smartincome.tistory.com/269
