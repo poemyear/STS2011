@@ -22,60 +22,75 @@
 	1.1. file:, allintitle 등 옵션기능 추가
 	
 # Program Flow:
-	검색어 input
-	검색결과 크롤링
-	크롤링 페이지 내 domain link 분류
-	사용자로부터 domain 선택 (-site: or +site)
-	구글 search url link 생성
-	redirect to link or return url(or copy)
+	1) 검색어 input
+		(i.e.) text: array and arraylist performance
+	2) 검색결과 크롤링
+	3) 크롤링 페이지 내 domain link 분류
+		(i.e.) stackoverflow.com (3) | blogspot.com (1) | codeproject.com (1) | wordpress.com (1) | coderanch.com (1) | wikidot.com (1) | java67.com (1) | dzone.com (1) 
+	4) 사용자로부터 domain 선택 (-site: or +site)
+		(i.e.) -site:stackoverflow.com
+	5) 구글 search url link 생성
+	6) redirect to link or return url(or copy)
 
 # Example (Search option)
-	구글 검색: array and arraylist performance 
-	(https://www.google.co.kr/search?q=array+and+arraylist+performance)
-		1. java - Array vs ArrayList in performance - Stack Overflow 
-			https://stackoverflow.com/.../array-vs-arraylist-in-performance
-		2. java - are arrays faster than arraylist? - Stack Overflow
-			https://stackoverflow.com/questions/.../are-arrays-faster-than-arra...
-		3. Array or List in Java. Which is faster? - Stack Overflow
-			https://stackoverflow.com/.../array-or-list-in-java-which-is-faster
-		4. 8 Difference between Array and ArrayList in Java with Example | Java ...
+	1) 검색어 input: array and arraylist performance 
+	2) 검색결과 크롤링
+		https://www.google.co.kr/search?q=array+and+arraylist+performance
+			java - Array vs ArrayList in performance - Stack Overflow 
+				https://stackoverflow.com/.../array-vs-arraylist-in-performance
+			java - are arrays faster than arraylist? - Stack Overflow
+				https://stackoverflow.com/questions/.../are-arrays-faster-than-arra...
+			Array or List in Java. Which is faster? - Stack Overflow
+				https://stackoverflow.com/.../array-or-list-in-java-which-is-faster
+			8 Difference between Array and ArrayList in Java with Example | Java ...
+				javahungry.blogspot.com/.../difference-between-array-and-arrayl...
+			Which is better? array, ArrayList or List (in terms of performance and ...
+				https://www.codeproject.com › ... › Uncategorised Quick Answers
+			PowerShell – Array vs. ArrayList Performance | /// stealthfield
+				https://stealthfield.wordpress.com/.../powershell-array-vs-arraylist...
+			Array vs ArrayList (Performance forum at Coderanch)
+				https://coderanch.com/t/568811/java/Array-ArrayList
+			How Does The Performance Of Arraylist compare with Array - Java Wiki
+				robaustin.wikidot.com/how-does-the-performance-of-arraylist-co...
+			Difference between Array vs ArrayList in Java | Java67
+				www.java67.com/.../difference-between-array-vs-arraylist-java.ht...
+			ArrayList vs. LinkedList vs. Vector - DZone Java
+				https://dzone.com/articles/arraylist-vs-linkedlist-vs
+	3) 크롤링 페이지 내 domain link 분류
+		stackoverflow.com (3)
+		blogspot.com (1)
+		codeproject.com (1)
+		wordpress.com (1)
+		coderanch.com (1)
+		wikidot.com (1)
+		java67.com (1)
+		dzone.com (1) 
+	4) 사용자로부터 domain 선택 (-site: or +site)
+		-site:stackoverflow.com
+	5) 구글 search url link 생성
+		https://www.google.co.kr/search?q=-site%3Astackoverflow.com+array+and+arraylist+performance
+	6) redirect to link or return url(or copy)
+		검색어: -site:stackoverflow.com array and arraylist performance 
+		8 Difference between Array and ArrayList in Java with Example | Java ...
 			javahungry.blogspot.com/.../difference-between-array-and-arrayl...
-		5. Which is better? array, ArrayList or List (in terms of performance and ...
+		Which is better? array, ArrayList or List (in terms of performance and ...
 			https://www.codeproject.com › ... › Uncategorised Quick Answers
-		6. PowerShell – Array vs. ArrayList Performance | /// stealthfield
-			https://stealthfield.wordpress.com/.../powershell-array-vs-arraylist...
-		7. Array vs ArrayList (Performance forum at Coderanch)
-			https://coderanch.com/t/568811/java/Array-ArrayList
-		8. How Does The Performance Of Arraylist compare with Array - Java Wiki
+		How Does The Performance Of Arraylist compare with Array - Java Wiki
 			robaustin.wikidot.com/how-does-the-performance-of-arraylist-co...
-		9. Difference between Array vs ArrayList in Java | Java67
-			www.java67.com/.../difference-between-array-vs-arraylist-java.ht...
-		10. ArrayList vs. LinkedList vs. Vector - DZone Java
-			https://dzone.com/articles/arraylist-vs-linkedlist-vs
-			
-	구글 검색: -site:stackoverflow.com array and arraylist performance 
-	(https://www.google.co.kr/search?q=-site%3Astackoverflow.com+array+and+arraylist+performance)
-		1. 8 Difference between Array and ArrayList in Java with Example | Java ...
-			javahungry.blogspot.com/.../difference-between-array-and-arrayl...
-		2. Which is better? array, ArrayList or List (in terms of performance and ...
-			https://www.codeproject.com › ... › Uncategorised Quick Answers
-		3. How Does The Performance Of Arraylist compare with Array - Java Wiki
-			robaustin.wikidot.com/how-does-the-performance-of-arraylist-co...
-		4. PowerShell – Array vs. ArrayList Performance | /// stealthfield
+		PowerShell – Array vs. ArrayList Performance | /// stealthfield
 			https://stealthfield.wordpress.com/.../powershell-array-vs-arraylist...
-		5. Array vs ArrayList (Performance forum at Coderanch)
+		Array vs ArrayList (Performance forum at Coderanch)
 			https://coderanch.com/t/568811/java/Array-ArrayList
-		6. is ArrayList faster than array ? - Processing Forum
+		is ArrayList faster than array ? - Processing Forum
 			https://forum.processing.org/topic/is-arraylist-faster-than-array
-		7. java.util.ArrayList performance guide - Java Performance Tuning Blog
+		java.util.ArrayList performance guide - Java Performance Tuning Blog
 			java-performance.info/arraylist-performance/
-		8. Array vs ArrayList in Java - GeeksforGeeks
+		Array vs ArrayList in Java - GeeksforGeeks
 			www.geeksforgeeks.org/array-vs-arraylist-in-java/
-		9. Which is better? array, ArrayList or List<T> (in terms of ...
+		Which is better? array, ArrayList or List<T> (in terms of ...
 			https://forums.asp.net/.../1808968.aspx?...array+ArrayList...perfo...
-		10. What is the difference between Array and ArrayList in Java? - Quora
+		What is the difference between Array and ArrayList in Java? - Quora
 			https://www.quora.com/What-is-the-difference-between-Array-an... 
-
 	
 # References:
 	python을 이용한 google chrome extension 제작
