@@ -90,6 +90,9 @@
 			https://www.quora.com/What-is-the-difference-between-Array-an... 
 	
 # References:
+	구글링 옵션 설명
+	http://smartincome.tistory.com/269
+	
 	python을 이용한 google chrome extension 제작
 	https://pythonspot.com/en/create-a-chrome-plugin-with-python/
 
