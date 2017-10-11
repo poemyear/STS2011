@@ -1,22 +1,10 @@
-def getInputSearchText():
-	print('1. get user\'s input search text')
-	return 'test sample'
-
-def doCrawlingByText(searchText):
-	print('2. crawling google searched result with search text' + ': ' + searchText)
-
-def classifySearchResult(searchResult):
-	print('3. classify domain links that on current search result page')
-
-def generateFilters():
-	print('4. user will select certain domain to show only or remove from result')
-
-def generateNewSearchLink(searchFilter):
-	print('5. program will generate new search link applied with search options')
-
-def redirectToPage(urlLink):
-	print('6. redirect (or copy url to clipboard, or just return url) to genreated search url link')
-
+import os, sys
+sys.path.append(os.path.abspath(os.path.join('input')))
+sys.path.append(os.path.abspath(os.path.join('output')))
+sys.path.append(os.path.abspath(os.path.join('process')))
+from input import *
+from output import *
+from process import *
 
 def main():
 	print('start program...')
