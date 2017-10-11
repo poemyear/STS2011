@@ -1,5 +1,5 @@
-def doCrawlingByText(searchText):
-	print('2. crawling google searched result with search text' + ': ' + searchText)
+def classifySearchResult(searchResult):
+	print('3. classify domain links that on current search result page')
 
 def generateFilters():
 	print('4. user will select certain domain to show only or remove from result')
