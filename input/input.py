@@ -1,9 +1,11 @@
+class Input:
 
-def getInputSearchText():
-	print('1. get user\'s input search text')
-	return 'test sample'
+	def getInputSearchText(self):
+		print('1. get user\'s input search text')
+		return 'input search text'
 
-def doCrawlingByText(searchText):
-	print('2. crawling google searched result with search text' + ': ' + searchText)
+	def doCrawlingByText(self, searchText):
+		print('2. crawling google searched result with search text' + ': ' + searchText)
+		return 'crawling result'
 
 

@@ -2,18 +2,29 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join('input')))
 sys.path.append(os.path.abspath(os.path.join('output')))
 sys.path.append(os.path.abspath(os.path.join('process')))
-from input import *
-from output import *
-from process import *
+from input import Input
+from output import Output
+from process import Process
 
 def main():
 	print('start program...')
-	searchText = getInputSearchText()
-	searchResult =  doCrawlingByText(searchText)
-	searchList = classifySearchResult(searchResult)
-	searchFilter = generateFilters()
-	urlLink = generateNewSearchLink(searchFilter)
-	redirectToPage(urlLink)
+	input = Input()
+	output = Output()
+	process = Process()
+
+	searchText = input.getInputSearchText()
+	print(searchText)
+	searchResult =  input.doCrawlingByText(searchText)
+	print(searchResult)
+	searchList = process.classifySearchResult(searchResult)
+	print(searchList)
+	searchFilter = process.generateFilters()
+	print(searchFilter)
+	urlLink = process.generateNewSearchLink(searchFilter)
+	print(urlLink)
+	out = output.redirectToPage(urlLink)
+	print(out)
+	
 	print('exit program...')
 
 
